@@ -30,16 +30,18 @@
 #include "doomiphone.h"
 
 void Com_Printf( const char *fmt, ... ) {
-	va_list		argptr;
+	va_list		argptr,argptr2;
 	
 	va_start( argptr, fmt );
+    va_copy(argptr2, argptr);
 	
 	//gsh, send output to the console buffer
 	char buffer[1024];
 	vsnprintf( buffer, sizeof( buffer ), fmt, argptr );
 	AppendConsoleBuffer(buffer);
 	
-	vprintf( fmt, argptr );
+	vprintf( fmt, argptr2 );
+    va_end(argptr2);
 	va_end( argptr );
 }
 

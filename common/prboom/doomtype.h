@@ -50,6 +50,8 @@ typedef unsigned char byte;
 
 #endif
 
+#include <stddef.h>
+
 //e6y
 #ifndef MAX
 #define MAX(a,b) ((a)>(b)?(a):(b))

@@ -83,7 +83,7 @@ typedef long EAS_RESULT;
 #define EAS_BUFFER_FULL                     5
 
 /* EAS_STATE return codes */
-typedef long EAS_STATE;
+typedef int EAS_STATE;
 typedef enum
 {
     EAS_STATE_READY = 0,

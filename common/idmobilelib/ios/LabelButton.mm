@@ -43,7 +43,7 @@
     
     CGFloat points = self.titleLabel.font.pointSize;
     
-    self.titleLabel.font = [UIFont fontWithName:@"idGinza Narrow" size:points];
+    [self.titleLabel setFont:[UIFont fontWithName:@"idGinzaNarrow-Medium2" size:points] ];
     
     // Localize the text.
     NSString * unLocText = self.titleLabel.text;
@@ -60,6 +60,7 @@
     if( self.label ) {
         labelColor = self.label.textColor;
     }
+    [ super awakeFromNib ];
 
 }
 

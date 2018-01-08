@@ -31,7 +31,8 @@
  */
 - (void)awakeFromNib {
     
-    [ self SetupLabel:@"idGinza Narrow" ];
+    [ self SetupLabel:@"idGinzaNarrow-Medium2" ];
+    [ super awakeFromNib ];
 }
 
 
@@ -42,9 +43,9 @@
  */
 - (void) SetupLabel: ( NSString * )fontName {
 
-    // Set the Font 
+    // Set the Font
     CGFloat points = self.font.pointSize;
-    self.font = [UIFont fontWithName:fontName size:points];
+    [self setFont:[UIFont fontWithName:fontName size:points]];
     
     // Localize the text.
     NSString * unLocText = self.text;

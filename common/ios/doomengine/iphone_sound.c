@@ -238,7 +238,7 @@ int I_GetSfxLumpNum (sfxinfo_t *sfx) {
 // volume ranges 0 - 64
 // seperation tanges is 128 straight ahead, 0 = all left ear, 255 = all right ear
 // pitch centers around 128
-int I_StartSound(int sfx_id, int channel, int vol, int sep, int pitch, int priority) {
+ptrdiff_t I_StartSound(int sfx_id, int channel, int vol, int sep, int pitch, int priority) {
 
 	sfxinfo_t *dsfx = &S_sfx[sfx_id];
 	
@@ -264,16 +264,16 @@ int I_StartSound(int sfx_id, int channel, int vol, int sep, int pitch, int prior
 	alSourcef( ch->sourceName, AL_PITCH, pitch / 128.0f );
 	alSourcePlay( ch->sourceName );
 	
-	return (int)ch;
+	return (ptrdiff_t)ch;
 }
 
 // Stops a sound channel.
-void I_StopSound(int handle) {}
+void I_StopSound(ptrdiff_t handle) {}
 
 // Called by S_*() functions
 //  to see if a channel is still playing.
 // Returns 0 if no longer playing, 1 if playing.
-boolean I_SoundIsPlaying(int handle) { 
+boolean I_SoundIsPlaying(ptrdiff_t handle) { 
 
 	channel_t *ch = (channel_t *)handle;
 	if ( !ch ) {
@@ -290,4 +290,4 @@ boolean I_AnySoundStillPlaying(void) { return false; }
 
 // Updates the volume, separation,
 //  and pitch of a sound channel.
-void I_UpdateSoundParams(int handle, int vol, int sep, int pitch) {}
+void I_UpdateSoundParams(ptrdiff_t handle, int vol, int sep, int pitch) {}

@@ -36,7 +36,6 @@
     IBOutlet UIButton * singleThumbButton;
     IBOutlet UIButton * dualThumbButton;
     IBOutlet UIButton * dirWheelButton;
-    
 }
 
 

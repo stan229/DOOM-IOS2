@@ -61,22 +61,22 @@ void I_SetChannels(void);
 int I_GetSfxLumpNum (sfxinfo_t *sfxinfo);
 
 // Starts a sound in a particular sound channel.
-int I_StartSound(int id, int channel, int vol, int sep, int pitch, int priority);
+ptrdiff_t I_StartSound(int id, int channel, int vol, int sep, int pitch, int priority);
 
 // Stops a sound channel.
-void I_StopSound(int handle);
+void I_StopSound(ptrdiff_t handle);
 
 // Called by S_*() functions
 //  to see if a channel is still playing.
 // Returns 0 if no longer playing, 1 if playing.
-boolean I_SoundIsPlaying(int handle);
+boolean I_SoundIsPlaying(ptrdiff_t handle);
 
 // Called by m_menu.c to let the quit sound play and quit right after it stops
 boolean I_AnySoundStillPlaying(void);
 
 // Updates the volume, separation,
 //  and pitch of a sound channel.
-void I_UpdateSoundParams(int handle, int vol, int sep, int pitch);
+void I_UpdateSoundParams(ptrdiff_t handle, int vol, int sep, int pitch);
 
 //
 //  MUSIC I/O
@@ -90,8 +90,8 @@ void I_UpdateMusic(void);
 void I_SetMusicVolume(int volume);
 
 // PAUSE game handling.
-void I_PauseSong(int handle);
-void I_ResumeSong(int handle);
+void I_PauseSong(ptrdiff_t handle);
+void I_ResumeSong(ptrdiff_t handle);
 
 // Registers a song handle to song data.
 int I_RegisterSong(const void *data, size_t len);
@@ -103,13 +103,13 @@ int I_RegisterMusic( const char* filename, musicinfo_t *music );
 //  plays a song, and when the song is done,
 //  starts playing it again in an endless loop.
 // Horrible thing to do, considering.
-void I_PlaySong(int handle, int looping);
+void I_PlaySong(ptrdiff_t handle, int looping);
 
 // Stops a song over 3 seconds.
-void I_StopSong(int handle);
+void I_StopSong(ptrdiff_t handle);
 
 // See above (register), then think backwards
-void I_UnRegisterSong(int handle);
+void I_UnRegisterSong(ptrdiff_t handle);
 
 // Allegro card support jff 1/18/98
 extern int snd_card;

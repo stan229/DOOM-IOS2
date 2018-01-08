@@ -50,6 +50,7 @@
     I_FindFile( "doom.wad", ".wad", full_iwad );
 	
 	iphoneDoomStartup( full_iwad, NULL );
+    [ super awakeFromNib ];
 }
 
 /*

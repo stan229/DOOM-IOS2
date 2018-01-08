@@ -456,7 +456,6 @@ static OSStatus inputRenderCallback (
 ) {
 
 	//printf( "Need %lu samples in %lu buffers!\n", inNumberFrames, ioData->mNumberBuffers );
-	
 	EAS_I32 generatedThisRender = 0;
 	EAS_I32 totalGenerated = 0;
 	
@@ -501,6 +500,7 @@ static OSStatus inputRenderCallback (
 		// destination is a 32-bit value.
 		// Also take this opportunity to de-interleave the EAS-rendered samples.
 		for ( int i = 0; i < RAW_EAS_BUFFER_FRAMES; ++i ) {
+            NSLog (@"DEBUG: %#04X", rawEASSamples[i*2+0]);
 			hardwareBufferLeft[totalGenerated + i] = rawEASSamples[i * 2 + 0] << 9;
 			hardwareBufferRight[totalGenerated + i] = rawEASSamples[i * 2 + 1] << 9;
 		}

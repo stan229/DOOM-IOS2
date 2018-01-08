@@ -60,7 +60,7 @@
 #endif // ID_DISABLE_SDL_SOUND
 
 #ifdef HAVE_MIXER
-#include "SDL_mixer.h"
+#include "SDL_Mixer.h"
 #endif
 
 #include "z_zone.h"
@@ -184,9 +184,9 @@ static int addsfx(int sfxid, int channel, const unsigned char* data, size_t len)
   return channel;
 }
 
-static void updateSoundParams(int handle, int volume, int seperation, int pitch)
+static void updateSoundParams(ptrdiff_t handle, int volume, int seperation, int pitch)
 {
-  int slot = handle;
+    ptrdiff_t slot = handle;
     int   rightvol;
     int   leftvol;
     int         step = steptable[pitch];
@@ -229,7 +229,7 @@ static void updateSoundParams(int handle, int volume, int seperation, int pitch)
   channelinfo[slot].rightvol_lookup = &vol_lookup[rightvol*256];
 }
 
-void I_UpdateSoundParams(int handle, int volume, int seperation, int pitch)
+void I_UpdateSoundParams(ptrdiff_t handle, int volume, int seperation, int pitch)
 {
   SDL_LockAudio();
   updateSoundParams(handle, volume, seperation, pitch);
@@ -303,7 +303,7 @@ int I_GetSfxLumpNum(sfxinfo_t* sfx)
 // Pitching (that is, increased speed of playback)
 //  is set, but currently not used by mixing.
 //
-int I_StartSound(int id, int channel, int vol, int sep, int pitch, int priority)
+int I_StartSound(int id, ptrdiff_t channel, int vol, int sep, int pitch, int priority)
 {
   const unsigned char* data;
   int lump;
@@ -348,7 +348,7 @@ int I_StartSound(int id, int channel, int vol, int sep, int pitch, int priority)
 
 
 
-void I_StopSound (int handle)
+void I_StopSound (ptrdiff_t handle)
 {
 #ifdef RANGECHECK
   if ((handle < 0) || (handle >= MAX_CHANNELS))
@@ -360,7 +360,7 @@ void I_StopSound (int handle)
 }
 
 
-boolean I_SoundIsPlaying(int handle)
+boolean I_SoundIsPlaying(ptrdiff_t handle)
 {
 #ifdef RANGECHECK
   if ((handle < 0) || (handle >= MAX_CHANNELS))
@@ -603,7 +603,7 @@ void I_InitSound(void)
 #ifndef HAVE_OWN_MUSIC
 
 #ifdef HAVE_MIXER
-#include "SDL_mixer.h"
+#include "SDL_Mixer.h"
 #include "mmus2mid.h"
 
 static Mix_Music *music[2] = { NULL, NULL };
@@ -671,7 +671,7 @@ void I_InitMusic(void)
 extern int mus_pause_opt; // From m_misc.c
 extern bool mus_on;
 
-void I_PlaySong(int handle, int looping)
+void I_PlaySong(ptrdiff_t handle, int looping)
 {
 #ifdef HAVE_MIXER
   if ( music[handle] && mus_on ) {
@@ -681,7 +681,7 @@ void I_PlaySong(int handle, int looping)
 #endif
 }
 
-void I_PauseSong (int handle)
+void I_PauseSong (ptrdiff_t handle)
 {
 #ifdef HAVE_MIXER
   switch(mus_pause_opt) {
@@ -696,7 +696,7 @@ void I_PauseSong (int handle)
   // Default - let music continue
 }
 
-void I_ResumeSong (int handle)
+void I_ResumeSong (ptrdiff_t handle)
 {
 #ifdef HAVE_MIXER
   switch(mus_pause_opt) {
@@ -711,14 +711,14 @@ void I_ResumeSong (int handle)
   /* Otherwise, music wasn't stopped */
 }
 
-void I_StopSong(int handle)
+void I_StopSong(ptrdiff_t handle)
 {
 #ifdef HAVE_MIXER
     Mix_FadeOutMusic(500);
 #endif
 }
 
-void I_UnRegisterSong(int handle)
+void I_UnRegisterSong(ptrdiff_t handle)
 {
 #ifdef HAVE_MIXER
   if ( music[handle] ) {
