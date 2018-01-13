@@ -122,7 +122,7 @@ typedef struct
  *
  *----------------------------------------------------------------------------
 */
-EAS_I16 WeightedTap(const EAS_I16 *array, EAS_I16 indexReference, EAS_I32 indexDesired, EAS_I16 indexLimit);
+static EAS_I16 WeightedTap(const EAS_I16 *array, EAS_I16 indexReference, EAS_I32 indexDesired, EAS_I16 indexLimit);
 
 /*----------------------------------------------------------------------------
  * ChorusReadInPresets()
@@ -135,7 +135,7 @@ EAS_I16 WeightedTap(const EAS_I16 *array, EAS_I16 indexReference, EAS_I32 indexD
  *
  *----------------------------------------------------------------------------
 */
-EAS_RESULT ChorusReadInPresets(S_CHORUS_OBJECT *pChorusData);
+static EAS_RESULT ChorusReadInPresets(S_CHORUS_OBJECT *pChorusData);
 
 /*----------------------------------------------------------------------------
  * ChorusUpdate
@@ -153,7 +153,7 @@ EAS_RESULT ChorusReadInPresets(S_CHORUS_OBJECT *pChorusData);
  * - m_nCurrentChorus := m_nNextChorus
  *----------------------------------------------------------------------------
 */
-EAS_RESULT ChorusUpdate(S_CHORUS_OBJECT* pChorusData);
+static EAS_RESULT ChorusUpdate(S_CHORUS_OBJECT* pChorusData);
 
 #endif /* #ifndef _EAS_CHORUSDATA_H */
 

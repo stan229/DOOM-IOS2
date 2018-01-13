@@ -83,7 +83,7 @@ typedef long EAS_RESULT;
 #define EAS_BUFFER_FULL                     5
 
 /* EAS_STATE return codes */
-typedef int EAS_STATE;
+typedef long EAS_STATE;
 typedef enum
 {
     EAS_STATE_READY = 0,
@@ -139,10 +139,9 @@ typedef EAS_I32 EAS_FILE_MODE;
 
 /* file locator e.g. filename or memory pointer */
 typedef struct s_eas_file_tag {
-    const char* path;
-    int         fd;
-    long long   offset;
-    long long   length;
+    void *handle;
+    int(*readAt)(void *handle, void *buf, int offset, int size);
+    int(*size)(void *handle);
 } EAS_FILE, *EAS_FILE_LOCATOR;
 
 /* handle to stream */

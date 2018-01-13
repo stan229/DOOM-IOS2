@@ -387,7 +387,7 @@ typedef struct
  *
  *----------------------------------------------------------------------------
 */
-EAS_RESULT ReverbUpdateXfade(S_REVERB_OBJECT* pReverbData, EAS_INT nNumSamplesToAdd);
+static EAS_RESULT ReverbUpdateXfade(S_REVERB_OBJECT* pReverbData, EAS_INT nNumSamplesToAdd);
 
 /*----------------------------------------------------------------------------
  * ReverbCalculateNoise
@@ -407,7 +407,7 @@ EAS_RESULT ReverbUpdateXfade(S_REVERB_OBJECT* pReverbData, EAS_INT nNumSamplesTo
  *
  *----------------------------------------------------------------------------
 */
-EAS_U16 ReverbCalculateNoise(EAS_U16 nMaxExcursion, EAS_I16 *pnNoise);
+static EAS_U16 ReverbCalculateNoise(EAS_U16 nMaxExcursion, EAS_I16 *pnNoise);
 
 /*----------------------------------------------------------------------------
  * ReverbCalculateSinCos
@@ -427,7 +427,7 @@ EAS_U16 ReverbCalculateNoise(EAS_U16 nMaxExcursion, EAS_I16 *pnNoise);
  *
  *----------------------------------------------------------------------------
 */
-EAS_RESULT ReverbCalculateSinCos(EAS_I16 nPhase, EAS_I16 *pnSin, EAS_I16 *pnCos);
+static EAS_RESULT ReverbCalculateSinCos(EAS_I16 nPhase, EAS_I16 *pnSin, EAS_I16 *pnCos);
 
 /*----------------------------------------------------------------------------
  * Reverb
@@ -447,7 +447,7 @@ EAS_RESULT ReverbCalculateSinCos(EAS_I16 nPhase, EAS_I16 *pnSin, EAS_I16 *pnCos)
  *
  *----------------------------------------------------------------------------
 */
-EAS_RESULT Reverb(S_REVERB_OBJECT* pReverbData, EAS_INT nNumSamplesToAdd, EAS_PCM *pOutputBuffer, EAS_PCM *pInputBuffer);
+static EAS_RESULT Reverb(S_REVERB_OBJECT* pReverbData, EAS_INT nNumSamplesToAdd, EAS_PCM *pOutputBuffer, EAS_PCM *pInputBuffer);
 
 /*----------------------------------------------------------------------------
  * ReverbReadInPresets()
@@ -460,7 +460,7 @@ EAS_RESULT Reverb(S_REVERB_OBJECT* pReverbData, EAS_INT nNumSamplesToAdd, EAS_PC
  *
  *----------------------------------------------------------------------------
 */
-EAS_RESULT ReverbReadInPresets(S_REVERB_OBJECT* pReverbData);
+static EAS_RESULT ReverbReadInPresets(S_REVERB_OBJECT* pReverbData);
 
 
 /*----------------------------------------------------------------------------
@@ -479,7 +479,7 @@ EAS_RESULT ReverbReadInPresets(S_REVERB_OBJECT* pReverbData);
  * - m_nCurrentRoom := m_nNextRoom
  *----------------------------------------------------------------------------
 */
-EAS_RESULT ReverbUpdateRoom(S_REVERB_OBJECT* pReverbData);
+static EAS_RESULT ReverbUpdateRoom(S_REVERB_OBJECT* pReverbData);
 
 #endif /* #ifndef _EAS_REVERBDATA_H */
 

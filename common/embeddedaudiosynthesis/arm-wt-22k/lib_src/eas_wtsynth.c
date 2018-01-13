@@ -28,6 +28,10 @@
 */
 
 // includes
+#define LOG_TAG "SYNTH"
+//#include "log/log.h"
+//#include <cutils/log.h>
+
 #include "eas_data.h"
 #include "eas_report.h"
 #include "eas_host.h"
@@ -467,6 +471,11 @@ EAS_BOOL WT_CheckSampleEnd (S_WT_VOICE *pWTVoice, S_WT_INT_FRAME *pWTIntFrame, E
         } else {
             pWTIntFrame->numSamples = numSamples;
         }
+        if (pWTIntFrame->numSamples < 0) {
+            //ALOGE("b/26366256");
+            //android_errorWriteLog(0x534e4554, "26366256");
+            pWTIntFrame->numSamples = 0;
+        }
 
         /* sound will be done this frame */
         done = EAS_TRUE;
@@ -549,6 +558,14 @@ static EAS_BOOL WT_UpdateVoice (S_VOICE_MGR *pVoiceMgr, S_SYNTH *pSynth, S_SYNTH
     else
         temp += (pVoice->note + pSynth->globalTranspose) * 100;
     intFrame.frame.phaseIncrement = WT_UpdatePhaseInc(pWTVoice, pArt, pChannel, temp);
+    temp = pWTVoice->loopEnd - pWTVoice->loopStart;
+    if (temp != 0) {
+        temp = temp << NUM_PHASE_FRAC_BITS;
+        if (intFrame.frame.phaseIncrement > temp) {
+            //ALOGW("%p phaseIncrement=%d", pWTVoice, (int)intFrame.frame.phaseIncrement);
+            intFrame.frame.phaseIncrement %= temp;
+        }
+    }
 
     /* call into engine to generate samples */
     intFrame.pAudioBuffer = pVoiceMgr->voiceBuffer;
@@ -562,6 +579,9 @@ static EAS_BOOL WT_UpdateVoice (S_VOICE_MGR *pVoiceMgr, S_SYNTH *pSynth, S_SYNTH
         done = EAS_FALSE;
 
     if (intFrame.numSamples < 0) intFrame.numSamples = 0;
+
+    if (intFrame.numSamples > BUFFER_SIZE_IN_MONO_SAMPLES)
+        intFrame.numSamples = BUFFER_SIZE_IN_MONO_SAMPLES;
 
 #ifdef EAS_SPLIT_WT_SYNTH
     if (voiceNum < NUM_PRIMARY_VOICES)

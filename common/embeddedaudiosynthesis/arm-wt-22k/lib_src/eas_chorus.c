@@ -194,7 +194,7 @@ static EAS_RESULT ChorusInit (EAS_DATA_HANDLE pEASData, EAS_VOID_PTR *pInstData)
  *
  *----------------------------------------------------------------------------
 */
-EAS_I16 WeightedTap(const EAS_I16 *array, EAS_I16 indexReference, EAS_I32 indexDesired, EAS_I16 indexLimit)
+static EAS_I16 WeightedTap(const EAS_I16 *array, EAS_I16 indexReference, EAS_I32 indexDesired, EAS_I16 indexLimit)
 {
     EAS_I16 index;
     EAS_I16 fraction;
@@ -526,7 +526,7 @@ static EAS_RESULT ChorusSetParam (EAS_VOID_PTR pInstData, EAS_I32 param, EAS_I32
  *
  *----------------------------------------------------------------------------
 */
-EAS_RESULT ChorusReadInPresets(S_CHORUS_OBJECT *pChorusData)
+static EAS_RESULT ChorusReadInPresets(S_CHORUS_OBJECT *pChorusData)
 {
 
     int preset = 0;
@@ -582,7 +582,7 @@ EAS_RESULT ChorusReadInPresets(S_CHORUS_OBJECT *pChorusData)
  * - m_nCurrentRoom := m_nNextRoom
  *----------------------------------------------------------------------------
 */
-EAS_RESULT ChorusUpdate(S_CHORUS_OBJECT *pChorusData)
+static EAS_RESULT ChorusUpdate(S_CHORUS_OBJECT *pChorusData)
 {
     S_CHORUS_PRESET *pPreset = &pChorusData->m_sPreset.m_sPreset[pChorusData->m_nNextChorus];
 

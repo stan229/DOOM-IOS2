@@ -51,9 +51,10 @@ void SetHudSpot( ibutton_t *hp, int x, int y, int dw, int dh ) {
     x *= ((float)displaywidth) / 480.0f;
     y *= ((float)displayheight) / 320.0f;
     
+    
     dw *= themin;
     dh *= themin;
-    
+
 	hp->x = x - dw/2;
 	hp->y = y - dh/2;
 	hp->drawWidth = dw;

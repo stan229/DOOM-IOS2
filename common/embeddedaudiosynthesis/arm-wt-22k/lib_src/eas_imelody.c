@@ -579,7 +579,7 @@ static EAS_RESULT IMY_Event (S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData, EAS_I
  *----------------------------------------------------------------------------
 */
 /*lint -esym(715, pEASData) common decoder interface - pEASData not used */
-static EAS_RESULT IMY_State (S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData, EAS_STATE *pState)
+static EAS_RESULT IMY_State (S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData, EAS_I32 *pState)
 {
     S_IMELODY_DATA* pData;
 

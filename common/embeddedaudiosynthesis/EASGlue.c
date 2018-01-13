@@ -24,6 +24,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
+#include <unistd.h>
+#include <fcntl.h>
 
 #include "eas.h"
 #include "eas_wave.h"
@@ -40,8 +42,58 @@ static const S_EAS_LIB_CONFIG *pLibConfig;
 static int polyphony;
 static int bufferSize;
 
-static EAS_FILE file;
+//static EAS_FILE file;
 static EAS_HANDLE handle;
+
+struct my_file_struct_tag;
+
+typedef int (*my_readAtFunc)(struct my_file_struct_tag*, void*, int, int);
+typedef int (*my_sizeFunc)(struct my_file_struct_tag*);
+typedef void (*my_initFunc)(struct my_file_struct_tag*, const char*);
+typedef void (*my_closeFunc)(struct my_file_struct_tag*);
+
+typedef struct my_file_struct_tag {
+    int mFd;
+    off_t mBase;
+    off_t  mLength;
+    my_initFunc init;
+    my_closeFunc close;
+    my_readAtFunc readAt;
+    my_sizeFunc size;
+} my_file_struct;
+
+static int my_readAt(void *handle, void *buffer, int pos, int size) {
+    return ((my_file_struct*)handle)->readAt((my_file_struct*)handle, buffer, pos, size);
+}
+static int my_size(void *handle) {
+    return ((my_file_struct*)handle)->size((my_file_struct*)handle);
+}
+
+static void my_initImpl(my_file_struct* handle, const char * filename) {
+    handle->mFd = open(filename, O_RDONLY);
+    handle->mBase = 0;
+    handle->mLength = lseek(handle->mFd, 0, SEEK_END);
+}
+
+static void my_closeImpl(my_file_struct* handle) {
+    close(handle->mFd);
+    handle->mBase = 0;
+    handle->mLength = 0;
+}
+
+static int my_readAtImpl(my_file_struct* handle, void *buffer, int offset, int size) {
+    lseek(handle->mFd, handle->mBase + offset, SEEK_SET);
+    if (offset + size > handle->mLength) {
+        size = handle->mLength - offset;
+    }
+    return read(handle->mFd, buffer, size);
+}
+
+static int my_sizeImpl(my_file_struct* handle) {
+    return handle->mLength;
+}
+    
+static my_file_struct my_file;
 
 void EASGlueInit(void) {
 	EAS_RESULT result;
@@ -64,6 +116,10 @@ void EASGlueInit(void) {
 	if ( (result = EAS_Init(&pEASData)) != EAS_SUCCESS ) {
 		printf( "Error initializing EAS: %li\n", result );
 	}
+    my_file.init = my_initImpl;
+    my_file.close = my_closeImpl;
+    my_file.readAt = my_readAtImpl;
+    my_file.size = my_sizeImpl;
 }
 
 
@@ -79,12 +135,14 @@ void EASGlueShutdown(void) {
 void EASGlueOpenFile( const char * filename ) {
 
 	EAS_RESULT result;
-	
-	
+    EAS_FILE locator;
 	/* open the file */
-	file.path = filename;
-	file.fd = 0;
-	if ((result = EAS_OpenFile(pEASData, &file, &handle)) != EAS_SUCCESS) {
+    my_file.init(&my_file, filename);
+    locator.handle = &my_file;
+    locator.readAt = &my_readAt;
+    locator.size = &my_size;
+    
+	if ((result = EAS_OpenFile(pEASData, &locator, &handle)) != EAS_SUCCESS) {
 		printf( "Error opening EAS file: %li\n", result );
 		return;
 	}
@@ -140,6 +198,8 @@ void EASGlueCloseFile(void) {
 	}
 	
 	handle = 0;
+    
+    my_file.close(&my_file);
 }
 
 void EASGlueRender( EAS_PCM * outputBuffer, EAS_I32 * generatedSamples ) {

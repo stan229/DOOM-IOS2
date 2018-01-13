@@ -218,7 +218,7 @@ void glEnd( void ) {
 
 void landscapeViewport( GLint x, GLint y, GLsizei width, GLsizei height ) {
 	y = 0;	// !@#
-	glViewport( y, x, height, width );
+	glViewport( y, x, width, height );
 }
 
 void landscapeScissor( GLint x, GLint y, GLsizei width, GLsizei height ) {

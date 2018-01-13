@@ -27,6 +27,8 @@
  *----------------------------------------------------------------------------
 */
 
+#include <log/log.h>
+
 #include "eas_data.h"
 #include "eas_miditypes.h"
 #include "eas_parser.h"
@@ -43,6 +45,8 @@
 
 /* XMF header file type */
 #define XMF_IDENTIFIER          0x584d465f
+#define XMF_VERSION_1_00        0x312e3030
+#define XMF_VERSION_1_01        0x312e3031
 #define XMF_VERSION_2_00        0x322e3030
 #define XMF_FILE_TYPE           0x00000002
 #define XMF_SPEC_LEVEL          0x00000001
@@ -126,27 +130,36 @@ static EAS_RESULT XMF_CheckFileType (S_EAS_DATA *pEASData, EAS_FILE_HANDLE fileH
     /* read the version */
     if ((result = EAS_HWGetDWord(pEASData->hwInstData, fileHandle, &temp, EAS_TRUE))  != EAS_SUCCESS)
         return result;
-    if (temp != XMF_VERSION_2_00)
-    {
-        { /* dpp: EAS_ReportEx(_EAS_SEVERITY_ERROR, "XMF file version was 0x%08x, expected 0x%08x\n", temp, XMF_VERSION_2_00); */ }
-        return EAS_SUCCESS;
-    }
 
-    /* read the file type */
-    if ((result = EAS_HWGetDWord(pEASData->hwInstData, fileHandle, &temp, EAS_TRUE))  != EAS_SUCCESS)
-        return result;
-    if (temp != XMF_FILE_TYPE)
+    if (temp == XMF_VERSION_2_00)
     {
-        { /* dpp: EAS_ReportEx(_EAS_SEVERITY_ERROR, "XMF file type was 0x%08x, expected 0x%08x\n", temp, XMF_FILE_TYPE); */ }
-        return EAS_SUCCESS;
-    }
+        /* read the file type */
+        result = EAS_HWGetDWord(pEASData->hwInstData, fileHandle, &temp, EAS_TRUE);
+        if (result != EAS_SUCCESS)
+            return result;
 
-    /* read the spec level */
-    if ((result = EAS_HWGetDWord(pEASData->hwInstData, fileHandle, &temp, EAS_TRUE))  != EAS_SUCCESS)
-        return result;
-    if (temp != XMF_SPEC_LEVEL)
+        if (temp != XMF_FILE_TYPE)
+        {
+            { /* dpp: EAS_ReportEx(_EAS_SEVERITY_ERROR,
+                          "XMF file type was 0x%08x, expected 0x%08x\n", temp, XMF_FILE_TYPE); */ }
+            return EAS_SUCCESS;
+        }
+
+        /* read the spec level */
+        result = EAS_HWGetDWord(pEASData->hwInstData, fileHandle, &temp, EAS_TRUE);
+        if (result != EAS_SUCCESS)
+            return result;
+
+        if (temp != XMF_SPEC_LEVEL)
+        {
+            { /* dpp: EAS_ReportEx(_EAS_SEVERITY_ERROR,
+                          "XMF file spec was 0x%08x, expected 0x%08x\n", temp, XMF_SPEC_LEVEL); */ }
+            return EAS_SUCCESS;
+        }
+    }
+    else if (temp != XMF_VERSION_1_00 && temp != XMF_VERSION_1_01)
     {
-        { /* dpp: EAS_ReportEx(_EAS_SEVERITY_ERROR, "XMF file spec was 0x%08x, expected 0x%08x\n", temp, XMF_SPEC_LEVEL); */ }
+        { /* dpp: EAS_ReportEx(_EAS_SEVERITY_ERROR, "XMF file version was 0x%08x\n", temp); */ }
         return EAS_SUCCESS;
     }
 
@@ -573,6 +586,9 @@ static EAS_RESULT XMF_ReadNode (EAS_HW_DATA_HANDLE hwInstData, S_XMF_DATA *pXMFD
     if ((result = EAS_HWFilePos(hwInstData, pXMFData->fileHandle, &offset)) != EAS_SUCCESS)
         return result;
 
+    if (offset - nodeOffset > headerLength)
+        return EAS_FAILURE;
+
     /* skip to node contents */
     if ((result = EAS_HWFileSeek(hwInstData, pXMFData->fileHandle, nodeOffset + headerLength)) != EAS_SUCCESS)
         return result;
@@ -635,6 +651,11 @@ static EAS_RESULT XMF_ReadNode (EAS_HW_DATA_HANDLE hwInstData, S_XMF_DATA *pXMFD
         for ( ; numItems > 0; numItems--)
         {
             /* process this item */
+            if (offset <= nodeOffset) {
+                ALOGE("b/36725407: parser did not advance");
+                return EAS_ERROR_FILE_FORMAT;
+            }
+
             if ((result = XMF_ReadNode(hwInstData, pXMFData, offset, &length)) != EAS_SUCCESS)
                 return result;
 
