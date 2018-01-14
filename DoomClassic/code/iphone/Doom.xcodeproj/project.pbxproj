@@ -114,6 +114,8 @@
 		C8DB8A5F14BB88AC0006467C /* OpenGLView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8DB8A5714BB88AC0006467C /* OpenGLView~ipad.xib */; };
 		C8DB8A6014BB88AC0006467C /* SettingsMenuView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8DB8A5814BB88AC0006467C /* SettingsMenuView~ipad.xib */; };
 		E24B4A2420037A8A004CA1DA /* idGinzaNar-Md2.otf in Resources */ = {isa = PBXBuildFile; fileRef = C81E0E5D13E076E400B1049A /* idGinzaNar-Md2.otf */; };
+		E24B4A2A200BFFE8004CA1DA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E24B4A29200BFFE7004CA1DA /* AVFoundation.framework */; };
+		E24B4A2C200C0091004CA1DA /* 8MBGMSFX.SF2 in Resources */ = {isa = PBXBuildFile; fileRef = E24B4A2B200C0091004CA1DA /* 8MBGMSFX.SF2 */; };
 		E2E6CEC51FFE857000F4AA36 /* libidmobilelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E6CEC61FFE857000F4AA36 /* libidmobilelib.a */; };
 		EDD2760511C2B19E004A9B9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD2760411C2B19E004A9B9B /* CoreGraphics.framework */; };
 		EDD2760711C2B19E004A9B9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD2760611C2B19E004A9B9B /* Foundation.framework */; };
@@ -264,6 +266,8 @@
 		C8DB8A5614BB88AC0006467C /* MissionMenuView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MissionMenuView~ipad.xib"; sourceTree = "<group>"; };
 		C8DB8A5714BB88AC0006467C /* OpenGLView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "OpenGLView~ipad.xib"; sourceTree = "<group>"; };
 		C8DB8A5814BB88AC0006467C /* SettingsMenuView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SettingsMenuView~ipad.xib"; sourceTree = "<group>"; };
+		E24B4A29200BFFE7004CA1DA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E24B4A2B200C0091004CA1DA /* 8MBGMSFX.SF2 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 8MBGMSFX.SF2; path = ../../8MBGMSFX.SF2; sourceTree = "<group>"; };
 		E2E6CEC61FFE857000F4AA36 /* libidmobilelib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libidmobilelib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD2760411C2B19E004A9B9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		EDD2760611C2B19E004A9B9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -276,6 +280,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24B4A2A200BFFE8004CA1DA /* AVFoundation.framework in Frameworks */,
 				E2E6CEC51FFE857000F4AA36 /* libidmobilelib.a in Frameworks */,
 				1391CE171882E5F40049671C /* libprboom.a in Frameworks */,
 				13E3CC5F17F236840075D40A /* GameKit.framework in Frameworks */,
@@ -342,6 +347,7 @@
 		29B97317FDCFA39411CA2CEA /* App Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E24B4A2B200C0091004CA1DA /* 8MBGMSFX.SF2 */,
 				138FC9C617F2165D00D94C5F /* base.iPack */,
 				138FC9C717F2165D00D94C5F /* doom.wad */,
 				138FC9C817F2165D00D94C5F /* prboom.wad */,
@@ -359,6 +365,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E24B4A29200BFFE7004CA1DA /* AVFoundation.framework */,
 				E2E6CEC61FFE857000F4AA36 /* libidmobilelib.a */,
 				1391CE161882E5F40049671C /* libprboom.a */,
 				1391CE141882E5A30049671C /* libidmobilelib.a */,
@@ -666,6 +673,7 @@
 				C81E104C13E1CCA000B1049A /* BackButton.png in Resources */,
 				C81E104D13E1CCA000B1049A /* Button.png in Resources */,
 				C81E104E13E1CCA000B1049A /* DOOM_sigil_decal.png in Resources */,
+				E24B4A2C200C0091004CA1DA /* 8MBGMSFX.SF2 in Resources */,
 				C81E104F13E1CCA000B1049A /* DoomLogo.png in Resources */,
 				C81E105013E1CCA000B1049A /* Easy.png in Resources */,
 				C81E105113E1CCA000B1049A /* Hard.png in Resources */,
