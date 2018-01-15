@@ -34,15 +34,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="MenuBackground.png" id="443" userLabel="Background">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                    <rect key="frame" x="43.200668896313573" y="0.0" width="480.00000000000011" height="320"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DoomLogo.png" id="440" userLabel="Logo">
-                    <rect key="frame" x="95" y="23" width="289" height="185"/>
+                    <rect key="frame" x="138.69230769230023" y="23" width="289.00000000000006" height="184.99999999999997"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <view alpha="0.0" contentMode="scaleToFill" id="435" userLabel="Extras SubMenu" customClass="Banner_SubMenu">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                    <rect key="frame" x="43.200668896313573" y="0.0" width="480.00000000000011" height="320"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SubMenuBackground.png" id="466">
@@ -99,7 +99,7 @@
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view alpha="0.0" contentMode="scaleToFill" id="437" userLabel="About SubMenu" customClass="Banner_SubMenu">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                    <rect key="frame" x="43.200668896313573" y="0.0" width="480.00000000000011" height="320"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SubMenuBackground.png" id="464">
@@ -179,7 +179,7 @@
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view alpha="0.0" contentMode="scaleToFill" id="442" userLabel="Play SubMenu" customClass="Banner_SubMenu">
-                    <rect key="frame" x="-5" y="-20" width="568" height="320"/>
+                    <rect key="frame" x="0.0" y="-20" width="568" height="320"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SubMenuBackground.png" id="457">
@@ -259,7 +259,7 @@
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view alpha="0.0" contentMode="scaleToFill" id="444" userLabel="Settings SubMenu" customClass="Banner_SubMenu">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                    <rect key="frame" x="43.200668896313573" y="0.0" width="480.00000000000011" height="320"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SubMenuBackground.png" id="446">
@@ -332,8 +332,8 @@
                         <outlet property="label" destination="438" id="471"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="436" userLabel="About Button" customClass="idLabelButton">
-                    <rect key="frame" x="250" y="200" width="100" height="100"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="436" userLabel="About Button" customClass="idLabelButton">
+                    <rect key="frame" x="340" y="200" width="100" height="100"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                     <state key="normal" image="Button.png">
@@ -366,8 +366,8 @@
                         <outlet property="label" destination="432" id="470"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="445" userLabel="Extras Button" customClass="idLabelButton">
-                    <rect key="frame" x="366" y="140" width="100" height="100"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="445" userLabel="Extras Button" customClass="idLabelButton">
+                    <rect key="frame" x="448" y="140" width="100" height="100"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                     <state key="normal" image="Button.png">
@@ -390,8 +390,8 @@
                     <color key="textColor" red="0.87058824300000004" green="0.71372550729999995" blue="0.34509804840000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="highlightedColor" red="0.87843137979999997" green="0.3843137324" blue="0.1137254909" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="#EXTRAS" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" id="434" customClass="idLabel">
-                    <rect key="frame" x="374" y="224" width="86" height="23"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="#EXTRAS" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" id="434" customClass="idLabel">
+                    <rect key="frame" x="455" y="224" width="86" height="23"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <color key="textColor" red="0.87058824300000004" green="0.71372550729999995" blue="0.34509804840000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -404,8 +404,8 @@
                     <color key="textColor" red="0.87058824300000004" green="0.71372550729999995" blue="0.34509804840000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="highlightedColor" red="0.87843137979999997" green="0.3843137324" blue="0.1137254909" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="#ABOUT" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" id="441" customClass="idLabel">
-                    <rect key="frame" x="257" y="283" width="86" height="23"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="#ABOUT" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" id="441" customClass="idLabel">
+                    <rect key="frame" x="347" y="283" width="86" height="23"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <color key="textColor" red="0.87058824300000004" green="0.71372550729999995" blue="0.34509804840000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

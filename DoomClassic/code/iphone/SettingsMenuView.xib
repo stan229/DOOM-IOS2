@@ -34,7 +34,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="MenuBackground.png" id="10" userLabel="Background">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                    <rect key="frame" x="43.471571906354825" y="0.0" width="480" height="320"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8" customClass="idLabelButton">
@@ -52,8 +52,8 @@
                         <action selector="BackToMain" destination="-1" eventType="touchUpInside" id="36"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9" customClass="idLabelButton">
-                    <rect key="frame" x="425" y="264" width="50" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9" customClass="idLabelButton">
+                    <rect key="frame" x="518" y="264" width="50" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                     <size key="titleShadowOffset" width="1" height="2"/>
@@ -95,7 +95,7 @@
                     <color key="shadowColor" red="0.03260869533" green="0.03260869533" blue="0.03260869533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <size key="shadowOffset" width="1" height="2"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="#Draw_Controls:" lineBreakMode="tailTruncation" minimumFontSize="10" id="12" customClass="idLabel">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="#Draw_Controls:" lineBreakMode="tailTruncation" minimumFontSize="10" id="12" customClass="idLabel">
                     <rect key="frame" x="236" y="40" width="117" height="23"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -113,8 +113,8 @@
                     <color key="shadowColor" red="0.03260869533" green="0.03260869533" blue="0.03260869533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <size key="shadowOffset" width="1" height="2"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="#Reset" lineBreakMode="tailTruncation" minimumFontSize="10" id="15" customClass="idLabel">
-                    <rect key="frame" x="431" y="259" width="38" height="20"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="#Reset" lineBreakMode="tailTruncation" minimumFontSize="10" id="15" customClass="idLabel">
+                    <rect key="frame" x="530" y="259" width="38" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                     <color key="textColor" red="0.99199116230010986" green="0.59887534379959106" blue="0.1355646550655365" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -122,7 +122,7 @@
                     <color key="shadowColor" red="0.03260869533" green="0.03260869533" blue="0.03260869533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <size key="shadowOffset" width="1" height="2"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="#Center_Sticks:" lineBreakMode="tailTruncation" minimumFontSize="10" id="19" customClass="idLabel">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="#Center_Sticks:" lineBreakMode="tailTruncation" minimumFontSize="10" id="19" customClass="idLabel">
                     <rect key="frame" x="245" y="136" width="108" height="23"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -131,7 +131,7 @@
                     <color key="shadowColor" red="0.03260869533" green="0.03260869533" blue="0.03260869533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <size key="shadowOffset" width="1" height="2"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="#Ramp_Turn:" lineBreakMode="tailTruncation" minimumFontSize="10" id="20" customClass="idLabel">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="#Ramp_Turn:" lineBreakMode="tailTruncation" minimumFontSize="10" id="20" customClass="idLabel">
                     <rect key="frame" x="260" y="191" width="93" height="23"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -149,7 +149,7 @@
                     <color key="shadowColor" red="0.03260869533" green="0.03260869533" blue="0.03260869533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <size key="shadowOffset" width="1" height="2"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="#Music:" lineBreakMode="tailTruncation" minimumFontSize="10" id="24" customClass="idLabel">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="#Music:" lineBreakMode="tailTruncation" minimumFontSize="10" id="24" customClass="idLabel">
                     <rect key="frame" x="301" y="86" width="52" height="23"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
