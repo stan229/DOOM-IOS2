@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		3D15600C14B51250000D33AA /* libtess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D155FD614B51128000D33AA /* libtess.a */; };
 		3D2B137714BFB57E00C8D221 /* iphone_loop.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B137614BFB57E00C8D221 /* iphone_loop.c */; };
-		3D2EC246148EBA8300273241 /* EASGlue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2EC244148EBA8300273241 /* EASGlue.h */; };
-		3D2EC247148EBA8300273241 /* EASGlue.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EC245148EBA8300273241 /* EASGlue.c */; };
 		3D460D2914BCA5430078262C /* iphone_async.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D460D2814BCA5430078262C /* iphone_async.cpp */; };
 		3D460D4F14BCFBD40078262C /* iphone_glViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3D460D4E14BCFBD40078262C /* iphone_glViewController.mm */; };
 		3D5BB94A14B79BFE00A9A7FB /* DoomGameCenterMatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D5BB94814B79BFE00A9A7FB /* DoomGameCenterMatch.h */; };
@@ -18,7 +16,6 @@
 		3D7D555D14D1C53A00A0F1FF /* iphone_start.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D555C14D1C53900A0F1FF /* iphone_start.cpp */; };
 		3D80889A1492E2E8002D6CC3 /* iphone_common.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3D8088991492E2E7002D6CC3 /* iphone_common.mm */; };
 		3D80889C1492E378002D6CC3 /* iphone_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D80889B1492E378002D6CC3 /* iphone_common.h */; };
-		3DC1C84814B627E600680D02 /* libEmbeddedAudioSynthesis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC1C5EB14B624EE00680D02 /* libEmbeddedAudioSynthesis.a */; };
 		3DC1CAF814B641CC00680D02 /* libprboom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC1C86A14B63E1C00680D02 /* libprboom.a */; };
 		3DDA6FCE148D765100C834C7 /* SDL_Mixer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDA6FCD148D765100C834C7 /* SDL_Mixer.h */; };
 		3DDA6FD1148DA2C800C834C7 /* SDL_Mixer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA6FD0148DA2C800C834C7 /* SDL_Mixer.m */; };
@@ -76,13 +73,6 @@
 			remoteGlobalIDString = 3D155FC014B51127000D33AA;
 			remoteInfo = tess;
 		};
-		3DC1C5EA14B624EE00680D02 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3DC1C5E614B624ED00680D02 /* EmbeddedAudioSynthesis.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3DC1C5D614B624ED00680D02;
-			remoteInfo = EmbeddedAudioSynthesis;
-		};
 		3DC1C86914B63E1C00680D02 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3DC1C86514B63E1B00680D02 /* prboom.xcodeproj */;
@@ -103,8 +93,6 @@
 		1391CE0E1882E50A0049671C /* idmobilelib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = idmobilelib.xcodeproj; path = ../idmobilelib/ios/idmobilelib.xcodeproj; sourceTree = "<group>"; };
 		3D155FD114B51127000D33AA /* tess.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = tess.xcodeproj; path = tess/tess.xcodeproj; sourceTree = "<group>"; };
 		3D2B137614BFB57E00C8D221 /* iphone_loop.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = iphone_loop.c; sourceTree = "<group>"; };
-		3D2EC244148EBA8300273241 /* EASGlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EASGlue.h; sourceTree = "<group>"; };
-		3D2EC245148EBA8300273241 /* EASGlue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EASGlue.c; sourceTree = "<group>"; };
 		3D460D2814BCA5430078262C /* iphone_async.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = iphone_async.cpp; sourceTree = "<group>"; };
 		3D460D4E14BCFBD40078262C /* iphone_glViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iphone_glViewController.mm; sourceTree = "<group>"; };
 		3D5BB94814B79BFE00A9A7FB /* DoomGameCenterMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoomGameCenterMatch.h; sourceTree = "<group>"; };
@@ -112,7 +100,6 @@
 		3D7D555C14D1C53900A0F1FF /* iphone_start.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = iphone_start.cpp; sourceTree = "<group>"; };
 		3D8088991492E2E7002D6CC3 /* iphone_common.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iphone_common.mm; sourceTree = "<group>"; };
 		3D80889B1492E378002D6CC3 /* iphone_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iphone_common.h; sourceTree = "<group>"; };
-		3DC1C5E614B624ED00680D02 /* EmbeddedAudioSynthesis.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EmbeddedAudioSynthesis.xcodeproj; path = EmbeddedAudioSynthesis/EmbeddedAudioSynthesis.xcodeproj; sourceTree = "<group>"; };
 		3DC1C86514B63E1B00680D02 /* prboom.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = prboom.xcodeproj; path = prboom/prboom.xcodeproj; sourceTree = "<group>"; };
 		3DDA6FCD148D765100C834C7 /* SDL_Mixer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_Mixer.h; path = ../SDL_shim/SDL_Mixer.h; sourceTree = "<group>"; };
 		3DDA6FD0148DA2C800C834C7 /* SDL_Mixer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDL_Mixer.m; path = ../SDL_shim/ios/SDL_Mixer.m; sourceTree = "<group>"; };
@@ -156,7 +143,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DC1CAF814B641CC00680D02 /* libprboom.a in Frameworks */,
-				3DC1C84814B627E600680D02 /* libEmbeddedAudioSynthesis.a in Frameworks */,
 				3D15600C14B51250000D33AA /* libtess.a in Frameworks */,
 				3DE6943D1489AFDE0049CAA4 /* Foundation.framework in Frameworks */,
 			);
@@ -177,24 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				3D155FD614B51128000D33AA /* libtess.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		3D2EC141148EB77900273241 /* embeddedaudiosynthesis */ = {
-			isa = PBXGroup;
-			children = (
-				3D2EC244148EBA8300273241 /* EASGlue.h */,
-				3D2EC245148EBA8300273241 /* EASGlue.c */,
-			);
-			name = embeddedaudiosynthesis;
-			path = ../embeddedaudiosynthesis;
-			sourceTree = "<group>";
-		};
-		3DC1C5E714B624ED00680D02 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3DC1C5EB14B624EE00680D02 /* libEmbeddedAudioSynthesis.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,9 +197,7 @@
 			children = (
 				1391CE0E1882E50A0049671C /* idmobilelib.xcodeproj */,
 				3DC1C86514B63E1B00680D02 /* prboom.xcodeproj */,
-				3DC1C5E614B624ED00680D02 /* EmbeddedAudioSynthesis.xcodeproj */,
 				3D155FD114B51127000D33AA /* tess.xcodeproj */,
-				3D2EC141148EB77900273241 /* embeddedaudiosynthesis */,
 				3DDA6FCC148D75DB00C834C7 /* SDL_shim */,
 				3DE6943E1489AFDE0049CAA4 /* doomengine */,
 				3DE6943B1489AFDE0049CAA4 /* Frameworks */,
@@ -318,7 +284,6 @@
 				3DE694861489B0850049CAA4 /* misc.h in Headers */,
 				3DE694891489B0850049CAA4 /* SoundEngine.h in Headers */,
 				3DDA6FCE148D765100C834C7 /* SDL_Mixer.h in Headers */,
-				3D2EC246148EBA8300273241 /* EASGlue.h in Headers */,
 				3D80889C1492E378002D6CC3 /* iphone_common.h in Headers */,
 				C86CA85814B4F3C40057FF54 /* iphone_delegate.h in Headers */,
 				C86CA85A14B4F3C40057FF54 /* iphone_glViewController.h in Headers */,
@@ -368,10 +333,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 3DC1C5E714B624ED00680D02 /* Products */;
-					ProjectRef = 3DC1C5E614B624ED00680D02 /* EmbeddedAudioSynthesis.xcodeproj */;
-				},
-				{
 					ProductGroup = 1391CE0F1882E50A0049671C /* Products */;
 					ProjectRef = 1391CE0E1882E50A0049671C /* idmobilelib.xcodeproj */;
 				},
@@ -406,13 +367,6 @@
 			remoteRef = 3D155FD514B51128000D33AA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3DC1C5EB14B624EE00680D02 /* libEmbeddedAudioSynthesis.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libEmbeddedAudioSynthesis.a;
-			remoteRef = 3DC1C5EA14B624EE00680D02 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		3DC1C86A14B63E1C00680D02 /* libprboom.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -442,7 +396,6 @@
 				3DF31FB0148C3A3600C66CD7 /* hud.c in Sources */,
 				3DF31FB4148C3B5100C66CD7 /* iphone_sound.c in Sources */,
 				3DDA6FD1148DA2C800C834C7 /* SDL_Mixer.m in Sources */,
-				3D2EC247148EBA8300273241 /* EASGlue.c in Sources */,
 				3D80889A1492E2E8002D6CC3 /* iphone_common.mm in Sources */,
 				C82EE118149958A0003B9C74 /* BackgroundMusic.cpp in Sources */,
 				C86CA85914B4F3C40057FF54 /* iphone_delegate.mm in Sources */,
