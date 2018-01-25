@@ -389,6 +389,7 @@ static void IR_ProjectSprite (mobj_t* thing, int lightlevel)
 	float voff,hoff;
 	
 	sprite.scale= FixedDiv(projectiony, tz);
+    
 	if (pSpr->frame & FF_FULLBRIGHT)
 		sprite.light = 255;
 	else
