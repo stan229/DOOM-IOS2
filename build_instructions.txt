@@ -1,0 +1,29 @@
+= README to build DOOM for iOS =
+
+1. Once Git repository is cloned go into DoomClassic directory and run:
+
+  $ ./extract_files.sh <ipa file>
+
+e.g.
+
+  $ ./extract_files.sh DOOM\ 2.7.ipa
+
+This will copy all the files from the ipa file that you need into the correct locations.
+
+2. Make sure Xcode is installed and then open the xcode workspace:
+
+  $ open DoomClassics.xcworkspace
+
+3. Xcode should open and then click on "General" tab.
+  a. Bundle Identifier should be unique but probably stay the same.
+  b. Need to make sure you can sign the app.  Tested with Personal Team (e.g. free developer account).
+
+4. Click on Play button on top of xcode window to build and run app in simulator (the device to simulate is also there).
+
+5. Should build and play in a simulator.
+
+6. Plug your iOS device into the Mac running Xcode and it should be an option where tyou specify the device to build for.
+
+7. It should install on the iOS device and run.  If Personal Team account used then it needs reinstalling every 7 days.
+
+8. Have fun...
