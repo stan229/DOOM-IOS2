@@ -803,6 +803,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/prboom.dst;
 				GCC_VERSION = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -814,6 +815,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/prboom.dst;
 				GCC_VERSION = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

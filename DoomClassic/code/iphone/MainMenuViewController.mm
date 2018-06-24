@@ -26,6 +26,7 @@
 #import "SettingsMenuViewController.h"
 #import "ControlsMenuViewController.h"
 #import "LegalMenuViewController.h"
+#import <React/RCTRootView.h>
 
 /*
  ================================================================================================
@@ -302,19 +303,29 @@
  */
 - (IBAction) LegalPressed {
     
-    Doom_LegalMenuViewController *vc = nil;
-	
-	if ( IS_IPHONE_5 ) {
-		vc = [[Doom_LegalMenuViewController alloc] initWithNibName:@"LegalMenuViewi5" bundle:nil];
-	} else {
-		vc = [[Doom_LegalMenuViewController alloc] initWithNibName:@"LegalMenuView" bundle:nil];
-	}
-	
-	
-    [self.navigationController pushViewController:vc animated:NO];
-    [vc release];
+//    Doom_LegalMenuViewController *vc = nil;
+//
+//    if ( IS_IPHONE_5 ) {
+//        vc = [[Doom_LegalMenuViewController alloc] initWithNibName:@"LegalMenuViewi5" bundle:nil];
+//    } else {
+//        vc = [[Doom_LegalMenuViewController alloc] initWithNibName:@"LegalMenuView" bundle:nil];
+//    }
+//
+//
+//    [self.navigationController pushViewController:vc animated:NO];
+//    [vc release];
+//
+//    Sound_StartLocalSound( "iphone/baborted_01.wav" );
     
-    Sound_StartLocalSound( "iphone/baborted_01.wav" );
+    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios"];
+    RCTRootView *rootView =
+    [[RCTRootView alloc] initWithBundleURL: jsCodeLocation
+                                moduleName: @"Doom"
+                         initialProperties: nil
+                             launchOptions: nil];
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view = rootView;
+    [self.navigationController pushViewController:vc animated:NO];
 }
 
 /*

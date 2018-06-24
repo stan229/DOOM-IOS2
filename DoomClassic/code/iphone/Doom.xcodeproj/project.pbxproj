@@ -35,6 +35,8 @@
 		43CF02FF0F56974E00E4A23D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 43CF02FE0F56974E00E4A23D /* Default.png */; };
 		43E8D4E00F51B48B003F09B2 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E8D4DF0F51B48B003F09B2 /* OpenAL.framework */; };
 		720EBBAE0F82E0BB003F989A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720EBBAD0F82E0BB003F989A /* QuartzCore.framework */; };
+		88D5C9BD20DEE9C000358BCE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D5C9B620DEE9B300358BCE /* StoreKit.framework */; };
+		B7C9DEBD3CC6731E0677586A /* libPods-Doom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDD59DC172A769A18D4998D /* libPods-Doom.a */; };
 		C8011C6614BF8BA2007AC5C5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C8011C6814BF8BA2007AC5C5 /* Localizable.strings */; };
 		C8012E5114B5122700B0E213 /* MainMenuViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C8012E4F14B5122700B0E213 /* MainMenuViewController.mm */; };
 		C8012E5214B5122700B0E213 /* MainMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8012E5014B5122700B0E213 /* MainMenuView.xib */; };
@@ -138,6 +140,48 @@
 			remoteGlobalIDString = 3DE694391489AFDE0049CAA4;
 			remoteInfo = doomengine;
 		};
+		88A0770420DD847600C67478 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88A076FB20DD847600C67478 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4A067DA117AF5D44A54C9FA7F8C77E51;
+			remoteInfo = DoubleConversion;
+		};
+		88A0770620DD847600C67478 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88A076FB20DD847600C67478 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A779EECAC4CBE85A1135B4D3B4A84CDB;
+			remoteInfo = Folly;
+		};
+		88A0770820DD847600C67478 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88A076FB20DD847600C67478 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A070DAA65B795702E7B9C20FD8E330CA;
+			remoteInfo = glog;
+		};
+		88A0770A20DD847600C67478 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88A076FB20DD847600C67478 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1865CF528F5943AC038369CAD06AA267;
+			remoteInfo = "Pods-Doom";
+		};
+		88A0770C20DD847600C67478 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88A076FB20DD847600C67478 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AF5E5CE43FF1C3D1984C13629D81935A;
+			remoteInfo = React;
+		};
+		88A0770E20DD847600C67478 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88A076FB20DD847600C67478 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E080E4FBB68305A0009A58163DEA91B2;
+			remoteInfo = yoga;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -166,7 +210,9 @@
 		13E3CC6217F237B80075D40A /* DOOM_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DOOM_144.png; sourceTree = "<group>"; };
 		13E3CC6317F237B80075D40A /* DOOM_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DOOM_152.png; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* Doom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2336FB1F49BE61C14AE6F2F3 /* Pods-Doom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doom/Pods-Doom.debug.xcconfig"; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		310C587C59D98F2F93FF1ABD /* Pods-Doom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doom.release.xcconfig"; path = "Pods/Target Support Files/Pods-Doom/Pods-Doom.release.xcconfig"; sourceTree = "<group>"; };
 		3DF31F85148C30F100C66CD7 /* doomengine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = doomengine.xcodeproj; path = ../../../common/ios/doomengine.xcodeproj; sourceTree = "<group>"; };
 		4333CCE70F5CC23E00AE2B6F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
 		434669A30F8D08C000EA7D6D /* doom_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = doom_Prefix.pch; sourceTree = "<group>"; };
@@ -174,7 +220,10 @@
 		43CF02FE0F56974E00E4A23D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		43E8D4DF0F51B48B003F09B2 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = /System/Library/Frameworks/OpenAL.framework; sourceTree = "<absolute>"; };
 		720EBBAD0F82E0BB003F989A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
+		88A076FB20DD847600C67478 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		88D5C9B620DEE9B300358BCE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90E7882235CC52F8176362DC /* Pods-Doom.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doom.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-Doom/Pods-Doom.distribution.xcconfig"; sourceTree = "<group>"; };
 		C8011C6714BF8BA2007AC5C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C8011C6914BF8BAB007AC5C5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C8011C6A14BF8BB1007AC5C5 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -266,6 +315,8 @@
 		C8DB8A5614BB88AC0006467C /* MissionMenuView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MissionMenuView~ipad.xib"; sourceTree = "<group>"; };
 		C8DB8A5714BB88AC0006467C /* OpenGLView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "OpenGLView~ipad.xib"; sourceTree = "<group>"; };
 		C8DB8A5814BB88AC0006467C /* SettingsMenuView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SettingsMenuView~ipad.xib"; sourceTree = "<group>"; };
+		CEDD59DC172A769A18D4998D /* libPods-Doom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Doom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D98FAF40DDFDF5750B32AFDB /* Pods-Doom.adhocdist.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doom.adhocdist.xcconfig"; path = "Pods/Target Support Files/Pods-Doom/Pods-Doom.adhocdist.xcconfig"; sourceTree = "<group>"; };
 		E24B4A29200BFFE7004CA1DA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E24B4A2B200C0091004CA1DA /* 8MBGMSFX.SF2 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 8MBGMSFX.SF2; path = ../../8MBGMSFX.SF2; sourceTree = "<group>"; };
 		E2E6CEC61FFE857000F4AA36 /* libidmobilelib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libidmobilelib.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,6 +343,8 @@
 				EDD2760711C2B19E004A9B9B /* Foundation.framework in Frameworks */,
 				EDD2760911C2B19E004A9B9B /* OpenGLES.framework in Frameworks */,
 				EDD2760B11C2B19E004A9B9B /* UIKit.framework in Frameworks */,
+				B7C9DEBD3CC6731E0677586A /* libPods-Doom.a in Frameworks */,
+				88D5C9BD20DEE9C000358BCE /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,15 +375,28 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		2164B3C248124B2EF49DF9BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2336FB1F49BE61C14AE6F2F3 /* Pods-Doom.debug.xcconfig */,
+				310C587C59D98F2F93FF1ABD /* Pods-Doom.release.xcconfig */,
+				D98FAF40DDFDF5750B32AFDB /* Pods-Doom.adhocdist.xcconfig */,
+				90E7882235CC52F8176362DC /* Pods-Doom.distribution.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				88A076FB20DD847600C67478 /* Pods.xcodeproj */,
 				132AC2CF1801D2E600884E11 /* Default-568h@2x.png */,
 				3DF31F85148C30F100C66CD7 /* doomengine.xcodeproj */,
 				29B97315FDCFA39411CA2CEA /* Source */,
 				29B97317FDCFA39411CA2CEA /* App Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				2164B3C248124B2EF49DF9BC /* Pods */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -365,6 +431,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88D5C9B620DEE9B300358BCE /* StoreKit.framework */,
 				E24B4A29200BFFE7004CA1DA /* AVFoundation.framework */,
 				E2E6CEC61FFE857000F4AA36 /* libidmobilelib.a */,
 				1391CE161882E5F40049671C /* libprboom.a */,
@@ -377,6 +444,7 @@
 				EDD2760811C2B19E004A9B9B /* OpenGLES.framework */,
 				720EBBAD0F82E0BB003F989A /* QuartzCore.framework */,
 				EDD2760A11C2B19E004A9B9B /* UIKit.framework */,
+				CEDD59DC172A769A18D4998D /* libPods-Doom.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -385,6 +453,19 @@
 			isa = PBXGroup;
 			children = (
 				3DF31F8A148C30F100C66CD7 /* libdoomengine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88A076FC20DD847600C67478 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88A0770520DD847600C67478 /* libDoubleConversion.a */,
+				88A0770720DD847600C67478 /* libFolly.a */,
+				88A0770920DD847600C67478 /* libglog.a */,
+				88A0770B20DD847600C67478 /* libPods-Doom.a */,
+				88A0770D20DD847600C67478 /* libReact.a */,
+				88A0770F20DD847600C67478 /* libyoga.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -576,6 +657,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Doom" */;
 			buildPhases = (
+				8D1841BD9E38774499BFF8F6 /* [CP] Check Pods Manifest.lock */,
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
 				1D60588F0D05DD3D006BFB54 /* Frameworks */,
@@ -600,7 +682,6 @@
 				LastUpgradeCheck = 0920;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = 7RPT7SFH7T;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
@@ -628,11 +709,16 @@
 				es,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			productRefGroup = 19C28FACFE9D520D11CA2CBB /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
 					ProductGroup = 3DF31F86148C30F100C66CD7 /* Products */;
 					ProjectRef = 3DF31F85148C30F100C66CD7 /* doomengine.xcodeproj */;
+				},
+				{
+					ProductGroup = 88A076FC20DD847600C67478 /* Products */;
+					ProjectRef = 88A076FB20DD847600C67478 /* Pods.xcodeproj */;
 				},
 			);
 			projectRoot = ../..;
@@ -648,6 +734,48 @@
 			fileType = archive.ar;
 			path = libdoomengine.a;
 			remoteRef = 3DF31F89148C30F100C66CD7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88A0770520DD847600C67478 /* libDoubleConversion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDoubleConversion.a;
+			remoteRef = 88A0770420DD847600C67478 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88A0770720DD847600C67478 /* libFolly.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFolly.a;
+			remoteRef = 88A0770620DD847600C67478 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88A0770920DD847600C67478 /* libglog.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libglog.a;
+			remoteRef = 88A0770820DD847600C67478 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88A0770B20DD847600C67478 /* libPods-Doom.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-Doom.a";
+			remoteRef = 88A0770A20DD847600C67478 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88A0770D20DD847600C67478 /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = 88A0770C20DD847600C67478 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88A0770F20DD847600C67478 /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = 88A0770E20DD847600C67478 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -768,6 +896,24 @@
 			shellScript = "
 ";
 		};
+		8D1841BD9E38774499BFF8F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Doom-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -817,13 +963,14 @@
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2336FB1F49BE61C14AE6F2F3 /* Pods-Doom.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = 7RPT7SFH7T;
+				DEVELOPMENT_TEAM = "";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -837,7 +984,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hotmail.tom.Doom;
 				PROFILE_PREFIX = com.idsoftware;
@@ -852,13 +999,14 @@
 		};
 		1D6058950D05DD3E006BFB54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 310C587C59D98F2F93FF1ABD /* Pods-Doom.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = 7RPT7SFH7T;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = doom_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -869,7 +1017,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hotmail.tom.Doom;
 				PROFILE_PREFIX = com.idsoftware;
@@ -952,13 +1100,14 @@
 		};
 		4364BF490F5CB27300F29317 /* AdHocDist */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D98FAF40DDFDF5750B32AFDB /* Pods-Doom.adhocdist.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = 7RPT7SFH7T;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = doom_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -969,7 +1118,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hotmail.tom.Doom;
 				PROFILE_PREFIX = com.idsoftware;
@@ -1193,13 +1342,14 @@
 		};
 		ED06595C1087C51800E5450B /* Distribution */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90E7882235CC52F8176362DC /* Pods-Doom.distribution.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = 7RPT7SFH7T;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = doom_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1210,7 +1360,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hotmail.tom.Doom;
 				PROFILE_PREFIX = com.idsoftware;
