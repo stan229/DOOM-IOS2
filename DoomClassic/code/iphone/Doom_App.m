@@ -20,6 +20,8 @@
 #import "Doom_App.h"
 #import "MainMenuViewController.h"
 #import "MainNavController.h"
+#import "GLViewController.h"
+
 #include "doomiphone.h"
 
 @implementation DoomApp
@@ -44,7 +46,8 @@
 	if ( IS_IPHONE_5 ) {
 		openGLViewController = [ [ iphone_glViewController alloc] initWithNibName:@"OpenGLViewi5" bundle:nil ];
 	} else {
-		openGLViewController = [ [ iphone_glViewController alloc] initWithNibName:@"OpenGLView" bundle:nil ];
+        UIStoryboard* sb = [UIStoryboard storyboardWithName:@"OpenGLView" bundle:nil];
+        openGLViewController = [sb instantiateViewControllerWithIdentifier:@"GLViewController"];
 	}
 	
     [ openGLViewController StopDisplay];

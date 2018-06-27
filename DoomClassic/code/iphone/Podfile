@@ -13,6 +13,8 @@ target 'Doom' do
     'DevSupport',
     'RCTText',
     'RCTNetwork',
+    'RCTAnimation',
+    'RCTImage',
     'RCTWebSocket', # needed for debugging
   ]
   pod 'yoga', :path => '../../../node_modules/react-native/ReactCommon/yoga'

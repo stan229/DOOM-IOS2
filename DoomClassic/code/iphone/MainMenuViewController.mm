@@ -320,7 +320,7 @@
     NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios"];
     RCTRootView *rootView =
     [[RCTRootView alloc] initWithBundleURL: jsCodeLocation
-                                moduleName: @"Doom"
+                                moduleName: @"DoomMenu"
                          initialProperties: nil
                              launchOptions: nil];
     UIViewController *vc = [[UIViewController alloc] init];

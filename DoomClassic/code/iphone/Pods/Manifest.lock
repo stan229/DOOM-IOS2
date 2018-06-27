@@ -26,8 +26,13 @@ PODS:
     - React/PrivateDatabase
   - React/jsinspector (0.55.4)
   - React/PrivateDatabase (0.55.4)
+  - React/RCTAnimation (0.55.4):
+    - React/Core
   - React/RCTBlob (0.55.4):
     - React/Core
+  - React/RCTImage (0.55.4):
+    - React/Core
+    - React/RCTNetwork
   - React/RCTNetwork (0.55.4):
     - React/Core
   - React/RCTText (0.55.4):
@@ -45,6 +50,8 @@ DEPENDENCIES:
   - React/Core (from `../../../node_modules/react-native`)
   - React/CxxBridge (from `../../../node_modules/react-native`)
   - React/DevSupport (from `../../../node_modules/react-native`)
+  - React/RCTAnimation (from `../../../node_modules/react-native`)
+  - React/RCTImage (from `../../../node_modules/react-native`)
   - React/RCTNetwork (from `../../../node_modules/react-native`)
   - React/RCTText (from `../../../node_modules/react-native`)
   - React/RCTWebSocket (from `../../../node_modules/react-native`)
@@ -74,6 +81,6 @@ SPEC CHECKSUMS:
   React: aa2040dbb6f317b95314968021bd2888816e03d5
   yoga: a23273df0088bf7f2bb7e5d7b00044ea57a2a54a
 
-PODFILE CHECKSUM: 30d7e20cfc6ef25ccb4024e4fdb267ed6566696e
+PODFILE CHECKSUM: 561833f6f7aa6d98bae714ad878a40cd5c5e9ef0
 
 COCOAPODS: 1.5.3

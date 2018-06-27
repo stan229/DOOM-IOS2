@@ -129,6 +129,7 @@
 		3DE6961F148C28810049CAA4 /* iphone_render.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = iphone_render.c; sourceTree = "<group>"; };
 		3DF31FAF148C3A3600C66CD7 /* hud.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hud.c; sourceTree = "<group>"; };
 		3DF31FB3148C3B5100C66CD7 /* iphone_sound.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = iphone_sound.c; sourceTree = "<group>"; };
+		88E96B1820E01170006F2EEF /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C82EE117149958A0003B9C74 /* BackgroundMusic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BackgroundMusic.cpp; sourceTree = "<group>"; };
 		C86CA85214B4F3C40057FF54 /* iphone_delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iphone_delegate.h; sourceTree = "<group>"; };
 		C86CA85314B4F3C40057FF54 /* iphone_delegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iphone_delegate.mm; sourceTree = "<group>"; };
@@ -216,6 +217,7 @@
 		3DE6943B1489AFDE0049CAA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88E96B1820E01170006F2EEF /* libReact.a */,
 				E24B4A25200BFF72004CA1DA /* AVFoundation.framework */,
 				3DE6943C1489AFDE0049CAA4 /* Foundation.framework */,
 			);

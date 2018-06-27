@@ -81,6 +81,26 @@ static bool inTransition = false;
     return self;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        // Create the OpenGL View.
+        EAGLView *glView = [[EAGLView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
+        glView.layer.zPosition=0;
+        self.view = glView;
+        [glView release];
+        
+        
+        // Setup the Display Link
+        CADisplayLink *aDisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(runFrame)];
+        [ aDisplayLink setFrameInterval: DISPLAY_LINK_FRAME_INTERVAL];
+        [ aDisplayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+        [ self setDisplayLink: aDisplayLink ];
+        
+    }
+    return self;
+}
 /*
 ========================
 shouldAutorotateToInterfaceOrientation
@@ -99,9 +119,9 @@ shouldAutorotateToInterfaceOrientation
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Stop the Display link.
-    [self.displayLink invalidate];
-    self.displayLink = nil;
+//    // Stop the Display link.
+//    [self.displayLink invalidate];
+//    self.displayLink = nil;
 }
 
 

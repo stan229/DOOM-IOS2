@@ -35,7 +35,12 @@
 		43CF02FF0F56974E00E4A23D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 43CF02FE0F56974E00E4A23D /* Default.png */; };
 		43E8D4E00F51B48B003F09B2 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E8D4DF0F51B48B003F09B2 /* OpenAL.framework */; };
 		720EBBAE0F82E0BB003F989A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720EBBAD0F82E0BB003F989A /* QuartzCore.framework */; };
+		88CC646720E2A0290053E55B /* MenuManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CC646620E2A0290053E55B /* MenuManager.m */; };
 		88D5C9BD20DEE9C000358BCE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D5C9B620DEE9B300358BCE /* StoreKit.framework */; };
+		88E96B0E20E00349006F2EEF /* EmbedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E96B0D20E00349006F2EEF /* EmbedViewController.m */; };
+		88E96B1620E0051A006F2EEF /* OpenGLView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E96B1520E00519006F2EEF /* OpenGLView.storyboard */; };
+		88E96B1C20E01281006F2EEF /* GLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E96B1B20E01281006F2EEF /* GLViewController.m */; };
+		88E96B2020E155CD006F2EEF /* ControlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E96B1F20E155CD006F2EEF /* ControlManager.m */; };
 		B7C9DEBD3CC6731E0677586A /* libPods-Doom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDD59DC172A769A18D4998D /* libPods-Doom.a */; };
 		C8011C6614BF8BA2007AC5C5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C8011C6814BF8BA2007AC5C5 /* Localizable.strings */; };
 		C8012E5114B5122700B0E213 /* MainMenuViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C8012E4F14B5122700B0E213 /* MainMenuViewController.mm */; };
@@ -221,7 +226,16 @@
 		43E8D4DF0F51B48B003F09B2 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = /System/Library/Frameworks/OpenAL.framework; sourceTree = "<absolute>"; };
 		720EBBAD0F82E0BB003F989A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
 		88A076FB20DD847600C67478 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		88CC646520E2A0290053E55B /* MenuManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuManager.h; sourceTree = "<group>"; };
+		88CC646620E2A0290053E55B /* MenuManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuManager.m; sourceTree = "<group>"; };
 		88D5C9B620DEE9B300358BCE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		88E96B0C20E00349006F2EEF /* EmbedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmbedViewController.h; sourceTree = "<group>"; };
+		88E96B0D20E00349006F2EEF /* EmbedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmbedViewController.m; sourceTree = "<group>"; };
+		88E96B1520E00519006F2EEF /* OpenGLView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OpenGLView.storyboard; sourceTree = "<group>"; };
+		88E96B1A20E01281006F2EEF /* GLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLViewController.h; sourceTree = "<group>"; };
+		88E96B1B20E01281006F2EEF /* GLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLViewController.m; sourceTree = "<group>"; };
+		88E96B1E20E155CD006F2EEF /* ControlManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControlManager.h; sourceTree = "<group>"; };
+		88E96B1F20E155CD006F2EEF /* ControlManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ControlManager.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90E7882235CC52F8176362DC /* Pods-Doom.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doom.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-Doom/Pods-Doom.distribution.xcconfig"; sourceTree = "<group>"; };
 		C8011C6714BF8BA2007AC5C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -404,6 +418,7 @@
 		29B97315FDCFA39411CA2CEA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				88E96B1D20E155AE006F2EEF /* RN */,
 				C86CA85E14B4F5CC0057FF54 /* Doom */,
 				C86F965213D615BB0069B7B6 /* Interface Builder */,
 			);
@@ -470,9 +485,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		88E96B1D20E155AE006F2EEF /* RN */ = {
+			isa = PBXGroup;
+			children = (
+				88E96B1E20E155CD006F2EEF /* ControlManager.h */,
+				88E96B1F20E155CD006F2EEF /* ControlManager.m */,
+				88CC646520E2A0290053E55B /* MenuManager.h */,
+				88CC646620E2A0290053E55B /* MenuManager.m */,
+			);
+			path = RN;
+			sourceTree = "<group>";
+		};
 		C8012E4B14B510BA00B0E213 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				88E96B1520E00519006F2EEF /* OpenGLView.storyboard */,
 				C8012E8C14B6750B00B0E213 /* MissionMenuView.xib */,
 				C8012E8614B6722A00B0E213 /* LegalMenuView.xib */,
 				C8012E8114B6709C00B0E213 /* SettingsMenuView.xib */,
@@ -585,6 +612,10 @@
 				C8DB88F614BB5F840006467C /* Play menus */,
 				C8012E4E14B5122700B0E213 /* MainMenuViewController.h */,
 				C8012E4F14B5122700B0E213 /* MainMenuViewController.mm */,
+				88E96B0C20E00349006F2EEF /* EmbedViewController.h */,
+				88E96B0D20E00349006F2EEF /* EmbedViewController.m */,
+				88E96B1A20E01281006F2EEF /* GLViewController.h */,
+				88E96B1B20E01281006F2EEF /* GLViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -853,6 +884,7 @@
 				C87931F513F610B9003D834F /* SettingsButton_Highlighted.png in Resources */,
 				C87931F613F610B9003D834F /* SettingsButton.png in Resources */,
 				13E3CC6417F237B80075D40A /* DOOM_76.png in Resources */,
+				88E96B1620E0051A006F2EEF /* OpenGLView.storyboard in Resources */,
 				C87931F913F610B9003D834F /* SliderSkull.png in Resources */,
 				C8139AB313FADA800094C2C0 /* SliderSkull@2x.png in Resources */,
 				C8139AB513FADA9D0094C2C0 /* SliderSkull~ipad.png in Resources */,
@@ -922,9 +954,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				88E96B2020E155CD006F2EEF /* ControlManager.m in Sources */,
 				C86CA86414B4FF2B0057FF54 /* Doom_App.m in Sources */,
+				88CC646720E2A0290053E55B /* MenuManager.m in Sources */,
 				C8012E5114B5122700B0E213 /* MainMenuViewController.mm in Sources */,
 				C8012E6E14B6389B00B0E213 /* EpisodeMenuViewController.mm in Sources */,
+				88E96B0E20E00349006F2EEF /* EmbedViewController.m in Sources */,
+				88E96B1C20E01281006F2EEF /* GLViewController.m in Sources */,
 				C8012E7814B649DB00B0E213 /* CreditsMenuViewController.mm in Sources */,
 				133F3E7017F21C8700A12635 /* MainNavController.m in Sources */,
 				138FC9BB17F0813400D94C5F /* doom_wads.cpp in Sources */,

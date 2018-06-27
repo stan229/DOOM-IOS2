@@ -1,21 +1,6 @@
-import React, { Component } from 'react';
-import {AppRegistry, StyleSheet, Text, View} from 'react-native';
+import { AppRegistry } from 'react-native';
+import DoomControls from './DoomControls';
+import DoomMenu from './DoomMenu';
 
-class Doom extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-            <Text>Hello World</Text>
-                </View>
-        )
-    }
-}
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#F5FCFF',
-} });
-
-AppRegistry.registerComponent('Doom', () => Doom);
+AppRegistry.registerComponent('DoomControls', () => DoomControls);
+AppRegistry.registerComponent('DoomMenu', () => DoomMenu);
