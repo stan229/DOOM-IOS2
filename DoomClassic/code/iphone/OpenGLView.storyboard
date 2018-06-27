@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GLViewController-->
+        <scene sceneID="wYY-NR-dVb">
+            <objects>
+                <viewController storyboardIdentifier="GLViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S05-ab-l39" userLabel="GLViewController" customClass="GLViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nGd-Ig-VZl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xxd-7B-x0T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dh4-qJ-woo">
+                                <rect key="frame" x="278" y="87" width="240" height="128"/>
+                                <subviews>
+                                    <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEW-jb-gnZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <color key="backgroundColor" red="0.35077247972389813" green="0.63449888402579391" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <segue destination="DbV-6p-0g1" kind="embed" identifier="embed" id="Y06-ti-hOj"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xxd-7B-x0T" firstAttribute="top" secondItem="dh4-qJ-woo" secondAttribute="bottom" constant="160" id="670-Sa-r9c"/>
+                            <constraint firstAttribute="trailing" secondItem="dh4-qJ-woo" secondAttribute="trailing" constant="149" id="VKP-9v-Od5"/>
+                            <constraint firstItem="dh4-qJ-woo" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="278" id="nqN-bs-f08"/>
+                            <constraint firstItem="dh4-qJ-woo" firstAttribute="top" secondItem="nGd-Ig-VZl" secondAttribute="bottom" constant="87" id="qgK-Iz-tFZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="view" destination="1" id="1id-h7-ZDe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rse-d4-ki2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Embed View Controller-->
+        <scene sceneID="aPc-BW-gWS">
+            <objects>
+                <viewController id="DbV-6p-0g1" customClass="EmbedViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OK0-pg-iZp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qay-tV-kiG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T8T-l1-vdB">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ljg-2w-Wn5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="757"/>
+        </scene>
+    </scenes>
+</document>
